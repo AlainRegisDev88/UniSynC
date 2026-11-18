@@ -145,5 +145,29 @@ public abstract class Event {
     }
 
   
-    
+    // methods
+
+    public boolean registerMember(Member member) {
+        if (member == null) {
+            throw new IllegalArgumentException("Member cannot be null");
+        }
+
+        if (isFull() || registeredMembers.contains(member)) {
+        return false; // Normal failure, returns false cleanly
+    }
+        registeredMembers.add(member);
+        return true;
+    }
+
+    public boolean isFull() {
+        return registeredMembers.size() >= capacity;
+    }
+
+    public int getRegisteredCount() {
+        return registeredMembers.size();
+    }
+
+
+    // abstract method
+    public abstract double calculateCost();
 }
