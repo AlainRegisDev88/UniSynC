@@ -4,7 +4,7 @@ public class Workshop extends Event {
 
     @Override 
     public double calculateCost() {
-        return 0;
+        return 0;   
     }
 
 }
