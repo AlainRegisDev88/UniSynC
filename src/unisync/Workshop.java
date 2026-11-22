@@ -19,8 +19,30 @@ public class Workshop extends Event {
         this.materialCostPerPerson = materialCostPerPerson;
     }
 
-    
+    // Getters and Setters
+     public String getFacilitatorName() {
+        return facilitatorName;
+    }
 
+    public void setFacilitatorName(String facilitatorName) {
+        this.facilitatorName = facilitatorName;
+    }
+
+    public double getFacilitatorFee() {
+        return facilitatorFee;
+    }
+
+    public void setFacilitatorFee(double facilitatorFee) {
+        this.facilitatorFee = facilitatorFee;
+    }
+
+    public double getMaterialCostPerPerson() {
+        return materialCostPerPerson;
+    }
+
+    public void setMaterialCostPerPerson(double materialCostPerPerson) {
+        this.materialCostPerPerson = materialCostPerPerson;
+    }
 
 
 
