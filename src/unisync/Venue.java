@@ -27,7 +27,7 @@ public class Venue {
     }
 
     public void setVenueId(String venueId) {
-        this.venueId = venueId;
+        if (venueId != null) this.venueId = venueId;
     }
 
     public String getName() {
@@ -35,7 +35,7 @@ public class Venue {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null) this.name = name;
     }
 
     public int getCapacity() {
@@ -43,7 +43,7 @@ public class Venue {
     }
 
     public void setCapacity(int capacity) {
-        this.capacity = capacity;
+        if (capacity != 0) this.capacity = capacity;
     }
 
     public Map<LocalDate, Event> getBookings() {
@@ -56,12 +56,28 @@ public class Venue {
 
     // methods
     public void bookVenue(LocalDate date, Event e){
+        if (!isAvailable(date)) {
+            throw new IllegalStateException(name + " is on already on" + date);
+        }
+
+        bookings.put(date, e);
+
 
     }
 
     public boolean isAvailable(LocalDate date){
-        
+        return !bookings.containsKey(date);
     }
+
+    public void cancelBooking(LocalDate date){
+        bookings.remove(date);
+
+    }
+
+   
+   
+
+
 
 
     

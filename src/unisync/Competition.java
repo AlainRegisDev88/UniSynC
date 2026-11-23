@@ -62,7 +62,7 @@ public class Competition extends Event {
     }
 
     @Override 
-    public double calculateCost() {
+    public  double calculateCost() {
         return (numberOfJudges * feePerJudge) + prizeAmount;
     }
 

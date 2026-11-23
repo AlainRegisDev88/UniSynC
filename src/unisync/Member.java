@@ -3,6 +3,7 @@ package unisync;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 public class Member {
     private String memberId;
     private String name;
@@ -50,3 +51,10 @@ public class Member {
     public String getMemberRole() { return memberRole; }
     public List<Club> getClubs() { return clubs; }
 }
+=======
+
+
+    
+
+}
+>>>>>>> 38cf8f7a394b60f2baef8c03a3626b5198b3138c
